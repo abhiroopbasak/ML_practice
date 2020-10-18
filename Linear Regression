@@ -1,0 +1,41 @@
+import numpy as np
+from sklearn.linear_model import LinearRegression
+import matplotlib.pyplot as plt
+
+key=[]
+value=[]
+final=0
+print("Model Training!")
+num=int(input("Enter the number of dataset you want to enter"))
+for i in range(num):
+    print("Enter key value pair:")
+    k=int(input(">>>"))
+    v=int(input(">>>"))
+    key.append(k)
+    value.append(v)
+    
+fig=plt.figure(figsize=(10,5))
+plt.bar(key, value, color='green', width=0.4)
+plt.xlabel("Key")
+plt.ylabel("Value")
+plt.title("Linear Regression")
+plt.show()
+    
+key=np.array(key)
+value=np.array(value)
+key=key.reshape(-1,1)
+mind=LinearRegression()
+mind.fit(key,value)
+mind.coef_
+
+print("Test Data")
+tnum=int(input("Enter the number of dataset you want to enter"))
+for i in range(tnum):
+    print("Enter key value pair:")
+    tk=int(input(">>>"))
+    tv=int(input(">>>"))
+    r=mind.predict([[tk]])
+    print("Predicted value is ",r,". Actual value is ",tv)
+    sqd=(((tv-r)/tv)**2)*100
+    print("Model with",100-sqd,"% accuracy")
+    final+=sqd
