@@ -1,1 +1,3 @@
-# ML_practice
+# Machine Learning
+
+## Introduction to Regression and Prediction Algorithms
