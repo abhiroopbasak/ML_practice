@@ -1,1 +1,51 @@
+import pandas as pd
+import seaborn as sn
+from matplotlib import pyplot as plt
+import numpy as np
+from collections import Counter
+  
+
+
+
+df = pd.read_csv('recdata2.csv')
+df.drop('Unnamed: 0', inplace=True, axis=1)
+df.head(2)
+
+
+v = [None] * 10
+v[0]=df['video1'].unique()
+v[1]=df['video2'].unique()
+v[2]=df['video3'].unique()
+v[3]=df['video4'].unique()
+v[4]=df['video5'].unique()
+v[5]=df['video6'].unique()
+v[6]=df['video7'].unique()
+v[7]=df['video8'].unique()
+v[8]=df['video9'].unique()
+
+
+m=max(len(v[0]),len(v[1]),len(v[2]),len(v[3]),len(v[4]),len(v[5]),len(v[6]),len(v[7]),len(v[8]))
+print(m)
+
+
+
+
+
+data = {'Episode': df['video1'],
+        'ad1': df['video1'],
+        'ad2': df['video2'],
+        'ad3': df['video3'],
+        'ad4': df['video4'],
+        'ad5': df['video5'],
+        'ad6': df['video6'],
+        'ad7': df['video7'],
+        'ad8': df['video8']
+        }
+
+dff = pd.DataFrame(data,columns=['Episode','ad1','ad2','ad3','ad4','ad5','ad6','ad7','ad8'])
+print (dff)
+
+corr = dff.corr()
+plt.figure(figsize = (16,10))
+sn.heatmap(corr, cmap="Purples",annot=True,linewidths=.5)
 
