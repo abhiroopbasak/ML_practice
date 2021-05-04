@@ -11,6 +11,9 @@ The fundamental of Machine Learning Algorithm starts with Regression models. Lin
 ## Correlation Matrix and Heatmap
 
 A correlation matrix is a table showing correlation coefficients between variables. Each cell in the table shows the correlation between two variables. A correlation matrix is used to summarize data, as an input into a more advanced analysis, and as a diagnostic for advanced analyses.A heat map (or heatmap) is a data visualization technique that shows magnitude of a phenomenon as color in two dimensions. The variation in color may be by hue or intensity, giving obvious visual cues to the reader about how the phenomenon is clustered or varies over space.
+Output Heatmap:
+
+![Heatmap](heatmap.png)
 
 
 
