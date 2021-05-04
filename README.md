@@ -7,6 +7,9 @@ The various basics of Machine Learning using Python is displayed. Code of Regres
 ## Liner Regression
 
 The fundamental of Machine Learning Algorithm starts with Regression models. Linear regression is a linear model, e.g. a model that assumes a linear relationship between the input variables (x) and the single output variable (y). More specifically, that y can be calculated from a linear combination of the input variables (x).
+Output Bar Chart:
+
+![Barchart](barchart.png)
 
 ## Correlation Matrix and Heatmap
 
